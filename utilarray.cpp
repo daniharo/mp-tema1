@@ -1,6 +1,6 @@
 /**
  * @file utilarray.cpp
-   @author Daniel Haro Contreras
+ * @author Daniel Haro Contreras
  */
 
 #include <iostream>
@@ -28,7 +28,7 @@ int leerArray (int val[], const int max)
     int util;
 
     do{
-        cout << "Cuantos enteros va a intruducir? (max " << TAM << "): ";
+        cout << "Cuantos enteros va a intruducir? (max " << max << "): ";
         cin >> util;
     } while(util < 1 || util > max);
 
@@ -112,9 +112,9 @@ int busquedaBinariaArray(int aBuscar, const int array[], int inic, int fin)
         int centro = (izq+der) / 2;
 
         if (array[centro] > aBuscar)
-            der = centro;
+            der = centro-1;
         else if (array[centro] < aBuscar)
-            izq = centro;
+            izq = centro+1;
         else
             return centro;
     }
@@ -206,7 +206,7 @@ int mezclarUnico (const int array1[], const int util1, const int array2[], const
     }
 
     eliminarRepetidosArray2(arrayRes, utilRes);
-
+    ordenarporSeleccion(arrayRes, utilRes);
     return utilRes;
 }
 

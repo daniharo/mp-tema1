@@ -1,21 +1,13 @@
-/******************************************************************/
-// Metodología de la programación
-//
-// Daniel Haro Contreras
-//
-// Ejercicio 8 - Tema 1
-/******************************************************************/
-
 #include <iostream>
 #include "utilarray.h"
 using namespace std;
 
-const int TAM = 50;
-
 int main(void)
 {
+    const int TAM = 50;
+
     int val[TAM];
-    int utilVal = leerArray(val);
+    int utilVal = leerArray(val, TAM);
 
     int mayorSecuencia[TAM];
     int utilMayorSecuencia = mayorSecCreciente(val, utilVal, mayorSecuencia);

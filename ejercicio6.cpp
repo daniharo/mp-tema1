@@ -18,7 +18,12 @@ int main()
     cout << "A buscar: ";
     cin >> aBuscar;
 
-    
+    int posEncontrado = busquedaBinariaArray(aBuscar, val, 0, util-1);
 
+    if (posEncontrado != -1)
+        cout << "Encontrado en posicion " << posEncontrado;
+    else
+        cout << "NO encontrado";
+    
     return 0;
 }
