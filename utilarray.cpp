@@ -240,12 +240,16 @@ void eliminaEspacios(const char cad[], char cadRes[])
 bool esPalindromo(const char cad[])
 {
     char cadCopia[TAM];
-    int util = copiaCad(cad, cadCopia);
+    eliminaEspacios(cad, cadCopia);
+
+    // Calcular longitud de la cadena
+    int util;
+    for(util = 0; cadCopia[util] != '\0'; util++);
 
     bool esPalindromo = true;
 
     for(int izda = 0, dcha = util-1; izda < dcha && esPalindromo; izda++, dcha--)
-        esPalindromo = cadCopia[izda] == cadCopia[dcha];
+        esPalindromo = tolower(cadCopia[izda]) == tolower(cadCopia[dcha]);
     
     return esPalindromo;
 }
