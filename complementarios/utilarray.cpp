@@ -254,11 +254,11 @@ bool esPalindromo(const char cad[])
     return esPalindromo;
 }
 
-int buscarSubcadena(const char cad[], const char subCad[])
+int buscarSubcadena(const char cad[], const char subCad[], const int inicio)
 {
     int posEncontrada = -1;
     
-    for (int i = 0; (i <= strlen(cad) - strlen(subCad)) && (posEncontrada == -1); i++) {
+    for (int i = inicio; (i <= strlen(cad) - strlen(subCad)) && (posEncontrada == -1); i++) {
         bool coincide = true;
 
         for (int j = i, k=0; k < strlen(subCad) && coincide; j++, k++) {

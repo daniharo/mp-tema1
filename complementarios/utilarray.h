@@ -171,7 +171,7 @@ bool esPalindromo(const char cad[]);
  * @return int posición de la subcadena
  * @return -1 si no se encuentra la subcadena
  */
-int buscarSubcadena(const char cad[], const char subCad[]);
+int buscarSubcadena(const char cad[], const char subCad[], const int inicio);
 
 /**
  * @brief Inserta la cadena \b<aInsertar> en la posición \b<posInser> de la cadena \b<cad>
