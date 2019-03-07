@@ -1,4 +1,9 @@
+# Archivos de Virtual Studio
 .vscode
+
+# 
 doc
+
+# Archivos ejecutables
 *.exe
 *.bin
