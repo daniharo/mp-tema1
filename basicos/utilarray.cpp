@@ -172,6 +172,12 @@ int posMayorSecCreciente (const int val[], const int util, int &utilMayorSec)
         }
     }
 
+    // Se hace una última comprobación ya que la última subsecuencia no se rompe
+    if (contadorActual > maxContador) {
+        posEncontrado = posSecActual;
+        maxContador = contadorActual;
+    }
+
     utilMayorSec = maxContador;
     return (posEncontrado);
 }
