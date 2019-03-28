@@ -187,7 +187,7 @@ int mayorSecCreciente (const int val[], const int util, int res[])
     int utilMayorSec;
     int posMayorSec = posMayorSecCreciente(val, util, utilMayorSec);
 
-    for (int i = posMayorSec, posRes = 0; i < utilMayorSec; i++, posRes++) {
+    for (int i = posMayorSec, posRes = 0; posRes < utilMayorSec; i++, posRes++) {
         res[posRes] = val[i];
     }
 
